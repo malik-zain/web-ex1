@@ -1,0 +1,516 @@
+/* NAVBAR */
+html {
+  scroll-behavior: smooth;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+li a:active {
+  background-color: green;
+}
+
+/* CARESOUL */
+
+body {
+  background-color: #ffffff;
+  /* overflow-x: hidden; */
+}
+.carousel {
+  border: 1px solid black;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  width: 400%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  width: 100vw;
+  flex-shrink: 0;
+  height: 100%;
+  position: relative;
+}
+
+.slide img {
+  height: 100%;
+  width: 100vw;
+  object-fit: cover;
+  opacity: 0.7;
+  transition: width 0.4s ease;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.mannual {
+  position: absolute;
+  bottom: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+  gap: 10px;
+}
+
+.mannual-btn {
+  border-radius: 50%;
+  cursor: pointer;
+  background: white;
+  border: 2px solid #ccc;
+  padding: 5px;
+}
+
+.mannual-btn:hover {
+  background: #8d8080;
+}
+
+#slide1:checked ~ .slides {
+  transform: translateX(0%);
+}
+
+#slide2:checked ~ .slides {
+  transform: translateX(-100vw);
+}
+
+#slide3:checked ~ .slides {
+  transform: translateX(-200vw);
+}
+
+#slide1:checked ~ .mannual label[for="slide1"],
+#slide2:checked ~ .mannual label[for="slide2"],
+#slide3:checked ~ .mannual label[for="slide3"] {
+  background-color: black;
+}
+/*  TEXT OVERLAY ON CARESOUL */
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3.5rem;
+  background-color: rgba(0, 0, 0, 0.5); /* optional background */
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 80%;
+}
+/* Cities */
+.cities img:hover {
+  transform: scalef(1.1);
+}
+h1 {
+  text-align: center;
+  margin: 10px;
+  transition: all 0.3s ease;
+}
+h1:hover {
+  color: red;
+  font-size: 40px;
+}
+.cities1 {
+  height: auto;
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+}
+
+.islamabad {
+  width: 28vw;
+  margin: 10px auto 10px 30px;
+}
+.islamabad img {
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.Rawalpindi {
+  width: 30vw;
+  margin: 10px auto 10px 30px;
+}
+.Rawalpindi img {
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+.Lahore {
+  width: 30vw;
+  margin: 10px auto 10px 30px;
+}
+.Lahore img {
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+h2 {
+  text-align: center;
+  margin: 10px;
+  transition: all 0.3s ease;
+}
+h2:hover {
+  color: red;
+  font-size: 30px;
+}
+/* cities 2 */
+.cities2 {
+  height: auto;
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+}
+.Karachi {
+  width: 28vw;
+  margin: 10px auto 10px 30px;
+}
+.Karachi img {
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.Faisalabad {
+  width: 30vw;
+  margin: 10px auto 10px 30px;
+}
+.Faisalabad img {
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+.Quetta {
+  width: 30vw;
+  margin: 10px auto 10px 30px;
+}
+.Quetta img {
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+/* About and Contact */
+.space {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.about {
+  width: 40%;
+  margin: 20px;
+  text-align: justify;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.about:hover {
+  transform: scale(1.1) translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+.about p{
+  word-spacing: 2px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.contact {
+  width: 40%;
+  margin: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.contact h2{
+  margin: 20px auto;
+}
+.contact:hover {
+  transform: scale(1.1);
+}
+
+/* photos*/
+.cars {
+  display: flex;
+  height: auto;
+  width: 100%;
+}
+.cars img {
+  height: 250px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+.cars img:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+  transform: scale(1.1);
+}
+.every {
+  width: 30%;
+  margin: 20px;
+}
+.hiace {
+  width: 30%;
+  margin: 20px;
+}
+.hiroof {
+  width: 30%;
+  margin: 20px;
+}
+/* Fotter */
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 30px 20px;
+  margin-top: 0px;
+  /* background: url('ambulance1.jpg') ; */
+  object-fit: cover;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-info {
+  flex: 1;
+  min-width: 250px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.footer-info h3 {
+  margin-bottom: 10px;
+  color: #00ffcc;
+}
+
+.footer-map {
+  flex: 1;
+  min-width: 300px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.85rem;
+  color: #aaa;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+}
+/* FOR Cars */
+/* DROPDOWN */
+.navbar {
+  position: relative;
+}
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+  opacity: 0;
+  background-color: #18c92193;
+  position: absolute;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+li:hover .dropdown {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.dropdown li a:hover {
+  background-color: #01ff0d;
+}
+
+.dropdown li a {
+  color: white;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+}
+
+/* FOR EVERY */
+.body {
+  width: 100%;
+}
+.left {
+  background-color: rgb(209, 206, 206);
+  width: 50%;
+  float: left;
+  text-align: center;
+  margin: 20px auto;
+  height: 450px;
+}
+
+.left h1 {
+  margin-bottom: 60px;
+  margin-top: 20px;
+  font-size: 50px;
+}
+.body i {
+  padding: 10px;
+}
+.right {
+  background-color: rgb(255, 255, 255);
+  width: 50%;
+  float: left;
+  height: 450px;
+  margin: 20px auto;
+  overflow-x: hidden;
+}
+.right img {
+  margin: 40px auto;
+  width: 600px;
+  transition: all 0.3s ease;
+}
+.right img:hover {
+  transform: scale(1.1);
+}
+/* * FOR HIACE */
+.body1 {
+  width: 100%;
+  display: flex;
+}
+section {
+  display: flex;
+}
+.left1 {
+  background-color: rgb(209, 206, 206);
+  width: 55%;
+  float: left;
+  text-align: center;
+  margin: 40px auto;
+  height: 450px;
+}
+.left1 h1 {
+  margin-bottom: 60px;
+  margin-top: 20px;
+  font-size: 50px;
+}
+.left1 .item-card {
+  margin: 10px;
+  transition: all 0.3 ease;
+  color: green;
+}
+.left1 .item-card:hover h3 {
+  color: rgba(0, 128, 0, 0.815);
+}
+.left1 .item-card:hover p {
+  color: rgba(0, 128, 0, 0.726);
+}
+.left1 .item-card4 {
+  margin: 10px;
+  margin-left: 30px;
+}
+.right1 img {
+  width: 100%;
+  height: auto;
+  transition: all 0.3s ease;
+}
+.right1 img:hover {
+  transform: scale(1.1);
+}
+
+.right1 {
+  width: 50%;
+  float: left;
+  overflow: hidden;
+}
+
+/* FOR HIROOF */
+.right2 img {
+  width: 100%;
+  height: auto;
+  transition: all 0.3s ease;
+}
+.right2 img:hover {
+  transform: scale(1.1);
+}
+
+.right2 {
+  width: 50%;
+  float: left;
+  overflow: hidden;
+  margin-top: 100px;
+}
+.left1 .item-card1 {
+  margin: 10px;
+  transition: all 0.3 ease;
+  color: RED;
+}
+.left1 .item-card1:hover h3 {
+  color: rgba(255, 0, 0, 0.712);
+}
+.left1 .item-card1:hover p {
+  color: rgba(255, 0, 0, 0.705);
+}
+.left1 .item-card4 {
+  margin: 10px;
+  margin-left: 30px;
+}
+
+/* ADRESS CONTACT EMAIL */
+.section {
+  display: flex;
+  width: 100%;
+  background-color: #0552098c;
+  margin-bottom: 0;
+  height: 150px;
+}
+
+.contact1, .email, .adress {
+  width: 30%;
+  margin: 20px;
+  height: 80%;
+  padding-top: 20px;
+}
+
+/* Add line between the sections */
+.section > div:not(:first-child) {
+  border-left: 2px solid #aaa5a5;
+  padding-left: 20px;
+}
+
+.section p {
+  text-align: center;
+  font-size: 15px;
+  color: rgb(59, 59, 59);
+}
